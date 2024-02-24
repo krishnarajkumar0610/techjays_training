@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:fruits_scanner/bloc/my_bloc.dart';
 import 'package:fruits_scanner/bloc/states.dart';
@@ -25,13 +26,13 @@ class _OptionBoxState extends State<OptionBox> {
       builder: (context, state) {
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 300),
-          top: state.containerHeight == false ? 530 : 600,
-          left: 20,
+          top: state.containerHeight == false ? 450.h : 520.h,
+          left: 20.w,
           child: Container(
-            width: 320,
-            height: 120,
+            width: 320.w,
+            height: 120.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(30.r),
               color: Colors.white,
             ),
             child: const Stack(

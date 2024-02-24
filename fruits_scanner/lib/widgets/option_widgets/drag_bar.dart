@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_scanner/bloc/my_bloc.dart';
 
 import 'package:fruits_scanner/bloc/states.dart';
@@ -20,17 +21,17 @@ class _DragBarState extends State<DragBar> {
       listener: (context, state) {},
       builder: (context, state) {
         return Positioned(
-          top: 5,
-          left: 130,
+          top: 5.h,
+          left: 130.w,
           child: GestureDetector(
             onVerticalDragEnd: (details) {
               return context.read<ScannerBloc>().add(BarEvent());
             },
             child: Container(
-              width: 60,
-              height: 8,
+              width: 60.w,
+              height: 8.h,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.grey),
+                  borderRadius: BorderRadius.circular(10.r), color: Colors.grey),
             ),
           ),
         );

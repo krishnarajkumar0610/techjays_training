@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_scanner/bloc/my_bloc.dart';
 import 'package:fruits_scanner/bloc/states.dart';
 
@@ -14,14 +15,14 @@ class NutritionFact extends StatelessWidget {
   }
 
   SizedBox space() {
-    return const SizedBox(
-      width: 20,
+    return SizedBox(
+      width: 20.w,
     );
   }
 
-  Column columnText(String title, String subTitile, double size) {
+  Column columnText(String title, String subTitle, double size) {
     return Column(
-      children: [textTitle(title, size), textTitle(subTitile, size)],
+      children: [textTitle(title, size), textTitle(subTitle, size)],
     );
   }
 
@@ -32,34 +33,34 @@ class NutritionFact extends StatelessWidget {
       builder: (context, state) {
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 300),
-          bottom: state.containerHeight==false ? 10:-120,
-          left: 20,
+          bottom: state.containerHeight == false ? 10.h : -120.h,
+          left: 20.w,
           child: Container(
-              width: 320,
-              height: 100,
+              width: 320.w,
+              height: 80.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(30.r),
                 color: Colors.white,
               ),
               child: Stack(
                 children: [
                   Positioned(
-                      left: 100,
-                      top: 10,
-                      child: textTitle("Nutrition Fact", 15)),
+                      left: 100.w,
+                      top: 10.h,
+                      child: textTitle("Nutrition Fact", 15.sp)),
                   Positioned(
                     top: 40,
                     left: 25,
                     child: Row(children: [
-                      columnText("Serving Size", "170g", 10),
+                      columnText("Serving Size", "170g", 10.sp),
                       space(),
-                      columnText("Calories", "150", 10),
+                      columnText("Calories", "150", 10.sp),
                       space(),
-                      columnText("Carbs", "1g", 10),
+                      columnText("Carbs", "1g", 10.sp),
                       space(),
-                      columnText("Protein", "30g", 10),
+                      columnText("Protein", "30g", 10.sp),
                       space(),
-                      columnText("Fat", "5g", 10)
+                      columnText("Fat", "5g", 10.sp)
                     ]),
                   )
                 ],

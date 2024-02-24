@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:fruits_scanner/widgets/nutrition_fact.dart';
 
@@ -25,23 +26,18 @@ class _ScanFruitsState extends State<ScanFruits> {
       child: Scaffold(
         body: Stack(
           children: [
-            SizedBox(
-              width: double.infinity,
-              child: setImage("assets/fruit.png"),
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: double.infinity,
+            Positioned.fill(child: setImage("assets/fruit.png")),
+            Positioned.fill(
               child: setImage(
                 "assets/scan_img.png",
               ),
             ),
             Positioned(
-              top: 50,
-              left: 20,
+              top: 50.h,
+              left: 20.w,
               child: SizedBox(
-                  width: 30,
-                  height: 30,
+                  width: 30.w,
+                  height: 30.h,
                   child: GestureDetector(
                       onTap: () {}, child: Image.asset("assets/close.png"))),
             ),

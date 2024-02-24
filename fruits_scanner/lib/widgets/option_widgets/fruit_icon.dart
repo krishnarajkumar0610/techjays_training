@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_scanner/bloc/my_bloc.dart';
 import 'package:fruits_scanner/bloc/states.dart';
 
@@ -17,13 +18,13 @@ class _FruitIconState extends State<FruitIcon> {
       listener: (context, state) {},
       builder: (context, state) {
         return Positioned(
-          top: 10,
-          left: 30,
+          top: 10.h,
+          left: 30.w,
           child: CircleAvatar(
             backgroundColor: Colors.grey,
-            radius: 25,
+            radius: 25.r,
             child: Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding:  EdgeInsets.all(5.0.w),
               child: Image.asset("assets/strawberry.png"),
             ),
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fruits_scanner/bloc/events.dart';
 import 'package:fruits_scanner/bloc/my_bloc.dart';
 import 'package:fruits_scanner/bloc/states.dart';
@@ -16,15 +17,15 @@ class _AlternateButtonState extends State<AlternateButton> {
     return GestureDetector(
       onTap: () => Navigator.pop(context),
       child: Container(
-        width: 250,
-        height: 40,
+        width: 250.w,
+        height: 40.h,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: Colors.deepPurple),
+            borderRadius: BorderRadius.circular(10.r), color: Colors.deepPurple),
         child: Center(
             child: Text(
           text,
-          style: const TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 15, color: Colors.black),
+          style:  TextStyle(
+              fontWeight: FontWeight.bold, fontSize: 15.sp, color: Colors.black),
         )),
       ),
     );
@@ -33,16 +34,16 @@ class _AlternateButtonState extends State<AlternateButton> {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: 70,
-      left: 20,
+      top: 70.h,
+      left: 20.w,
       child: BlocConsumer<ScannerBloc, ScannerState>(
         listener: (context, state) {},
         builder: (context, state) {
           return Container(
-            width: 130,
-            height: 40,
+            width: 130.w,
+            height: 40.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(10.r),
               color: Colors.deepPurple,
             ),
             child: GestureDetector(
@@ -56,7 +57,7 @@ class _AlternateButtonState extends State<AlternateButton> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           SizedBox(
-                            height: 200,
+                            height: 200.h,
                             // Adjust the height according to your need
                             //width: double.maxFinite,
                             child: SingleChildScrollView(
@@ -90,12 +91,12 @@ class _AlternateButtonState extends State<AlternateButton> {
                               ]),
                             ),
                           ),
-                          const SizedBox(
-                            height: 5,
+                           SizedBox(
+                            height: 5.h,
                           ),
                           getButton("Search Manually"),
-                          const SizedBox(
-                            height: 5,
+                          SizedBox(
+                            height: 5.h,
                           ),
                           getButton("Cancel")
                         ],

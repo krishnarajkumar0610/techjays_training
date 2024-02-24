@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FruitName extends StatefulWidget {
   const FruitName({super.key});
@@ -11,15 +12,15 @@ class FruitName extends StatefulWidget {
 class _FruitNameState extends State<FruitName> {
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
-      top: 22,
-      left: 90,
+    return Positioned(
+      top: 22.h,
+      left: 90.w,
       child: Text(
         "Strawberry",
         style: TextStyle(
           fontWeight: FontWeight.bold,
-          fontSize: 15,
-          letterSpacing: 0.5,
+          fontSize: 15.sp,
+          letterSpacing: 0.5.sp,
         ),
       ),
     );
