@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class AddTodo extends StatefulWidget {
-
   // ignore: prefer_const_constructors_in_immutables
   AddTodo({super.key});
 
@@ -16,8 +15,6 @@ class _AddTodoState extends State<AddTodo> {
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
   bool isEdit = false;
-
-  
 
   // This method is to post data
   Future<void> postData() async {
@@ -33,9 +30,6 @@ class _AddTodoState extends State<AddTodo> {
       Navigator.pop(context);
     }
   }
-
- 
-
 
   // building UI
   @override
